@@ -30,9 +30,9 @@ namespace WFA211108
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tenyésztőkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.párkeresőToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bejelentésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTenyesztok = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiParkereso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBejelentes = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvMain = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,41 +49,42 @@ namespace WFA211108
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tenyésztőkToolStripMenuItem,
-            this.párkeresőToolStripMenuItem,
-            this.bejelentésToolStripMenuItem});
+            this.tsmiTenyesztok,
+            this.tsmiParkereso,
+            this.tsmiBejelentes});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(887, 73);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // tenyésztőkToolStripMenuItem
+            // tsmiTenyesztok
             // 
-            this.tenyésztőkToolStripMenuItem.Image = global::WFA211108.Properties.Resources.wizard;
-            this.tenyésztőkToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tenyésztőkToolStripMenuItem.Name = "tenyésztőkToolStripMenuItem";
-            this.tenyésztőkToolStripMenuItem.Size = new System.Drawing.Size(76, 69);
-            this.tenyésztőkToolStripMenuItem.Text = "Tenyésztők";
-            this.tenyésztőkToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsmiTenyesztok.Image = global::WFA211108.Properties.Resources.wizard;
+            this.tsmiTenyesztok.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiTenyesztok.Name = "tsmiTenyesztok";
+            this.tsmiTenyesztok.Size = new System.Drawing.Size(76, 69);
+            this.tsmiTenyesztok.Text = "Tenyésztők";
+            this.tsmiTenyesztok.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // párkeresőToolStripMenuItem
+            // tsmiParkereso
             // 
-            this.párkeresőToolStripMenuItem.Image = global::WFA211108.Properties.Resources.love;
-            this.párkeresőToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.párkeresőToolStripMenuItem.Name = "párkeresőToolStripMenuItem";
-            this.párkeresőToolStripMenuItem.Size = new System.Drawing.Size(70, 69);
-            this.párkeresőToolStripMenuItem.Text = "Párkereső";
-            this.párkeresőToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsmiParkereso.Image = global::WFA211108.Properties.Resources.love;
+            this.tsmiParkereso.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiParkereso.Name = "tsmiParkereso";
+            this.tsmiParkereso.Size = new System.Drawing.Size(70, 69);
+            this.tsmiParkereso.Text = "Párkereső";
+            this.tsmiParkereso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // bejelentésToolStripMenuItem
+            // tsmiBejelentes
             // 
-            this.bejelentésToolStripMenuItem.Image = global::WFA211108.Properties.Resources.unicorn;
-            this.bejelentésToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.bejelentésToolStripMenuItem.Name = "bejelentésToolStripMenuItem";
-            this.bejelentésToolStripMenuItem.Size = new System.Drawing.Size(72, 69);
-            this.bejelentésToolStripMenuItem.Text = "Bejelentés";
-            this.bejelentésToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsmiBejelentes.Image = global::WFA211108.Properties.Resources.unicorn;
+            this.tsmiBejelentes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiBejelentes.Name = "tsmiBejelentes";
+            this.tsmiBejelentes.Size = new System.Drawing.Size(72, 69);
+            this.tsmiBejelentes.Text = "Bejelentés";
+            this.tsmiBejelentes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsmiBejelentes.Click += new System.EventHandler(this.TsmiBejelentes_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -189,9 +190,9 @@ namespace WFA211108
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tenyésztőkToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem párkeresőToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bejelentésToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTenyesztok;
+        private System.Windows.Forms.ToolStripMenuItem tsmiParkereso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBejelentes;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dgvMain;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

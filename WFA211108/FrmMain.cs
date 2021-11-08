@@ -13,7 +13,6 @@ namespace WFA211108
 {
     public partial class FrmMain : Form
     {
-
         public string ConnectionString { private set; get; }
 
         public FrmMain()
@@ -24,8 +23,17 @@ namespace WFA211108
             InitializeComponent();
         }
 
-        private void FrmMain_Load(object sender, EventArgs e)
+        private void FrmMain_Load(object sender, EventArgs e) => FillDGV();
+
+        private void TsmiBejelentes_Click(object sender, EventArgs e)
         {
+            new FrmAdatlap(ConnectionString).Show();
+            FillDGV();
+        }
+
+        private void FillDGV()
+        {
+            dgvMain.Rows.Clear();
             using (var connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
@@ -37,12 +45,13 @@ namespace WFA211108
                     "INNER JOIN Tenyeszto ON TulajdonosId = Tenyeszto.Id;",
                     connection).ExecuteReader();
 
-                while(r.Read())
+                while (r.Read())
                 {
-                    dgvMain.Rows.Add(r[0], r[1], r[2], r[3], r[4] + " Kg", 
+                    dgvMain.Rows.Add(r[0], r[1], r[2], r[3], r[4] + " Kg",
                         r.GetBoolean(5) ? "Csődör" : "Kanca");
                 }
             }
+
         }
     }
 }
